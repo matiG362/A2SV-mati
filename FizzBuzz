@@ -1,0 +1,28 @@
+class Solution {
+     
+    public List<String> fizzBuzz(int n) {
+     List<String> mystring = new ArrayList<>();
+    
+        String forthree= "Fizz";
+        String forfive="Buzz";
+        String forfiveandthree= "FizzBuzz";
+        for(int i=1;i<=n;i++){ 
+            if(i%5==0 && i%3==0){
+                mystring.add(forfiveandthree);
+                
+            } else if(i%3==0){
+         mystring.add(forthree);
+            
+        }else if(i%5==0){
+               mystring.add(forfive);
+            
+         }else{
+              mystring.add(tostring (i));
+        }
+        }
+      return mystring;  
+    }
+        String  tostring (int n){
+             return String.valueOf(n);
+        }
+}
