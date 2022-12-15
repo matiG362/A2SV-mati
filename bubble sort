@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+void bublesort(int a[],int n){
+    int numswap=0;
+    do{
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-1;j++){
+            if(a[j]>a[j+1]){
+                int temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+                numswap++;
+            }
+        }
+    }
+    }while(n>=2 && n<=600);
+    cout<<"Array is sorted in"<< " "<< numswap <<" swaps."<<endl;
+}
+
+int main(int argc, char** argv) {
+    int i;
+    int n;
+    int arr[5];
+//    cout<<"enter the size"<<endl;
+    cin>>n;
+//    cout<<"enter number"<<endl;
+
+    for( i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+//    cout<<"aftersorted"<<endl;
+    bublesort(arr,n);
+//    for(int i=0;i<5;i++){
+//        cout<<arr[i]<<" ";
+//    }
+int first_element =arr[0];
+int last_element = arr[n-1];
+cout<<"First Element: " <<first_element <<endl;
+cout<<"Last Element: "<<last_element <<endl;
+
+    return 0;
+}
