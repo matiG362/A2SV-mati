@@ -1,0 +1,10 @@
+class Solution {
+public:
+int Sol(int n, int k){
+    if(n==1)return 0;
+    return ( Sol(n-1,k) +k )%n;
+}
+    int findTheWinner(int n, int k) {
+        return Sol(n,k)+1;  
+    }
+};
