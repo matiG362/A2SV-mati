@@ -1,0 +1,22 @@
+    #include<iostream>
+    using namespace std;
+    int main()
+    {
+       long long n,m,k,l=0,o=0;
+       cin>>n>>m>>k;
+       
+       l=n/k;
+       if(n%k!=0)
+       {
+              l++;
+       }
+       
+       o=m/k;
+       
+       if(m%k!=0)
+       { 
+             o++;
+       }
+       
+       cout<<l*o;
+    }
